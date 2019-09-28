@@ -14,5 +14,13 @@ $(function(){
      })
 
 
+    //  弹出登陆框
+    $(".buy").click(function(){
+      $(".pop").css("display","flex");
+    })
+    // 关闭登陆框
+    $(".close").click(function(){
+      $(".pop").css("display","none");
+    })
 })
 

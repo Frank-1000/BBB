@@ -1,7 +1,7 @@
 $(function () {
     /* 异步请求网络请求 */
     /* 发送网络请求 */
-    console.log($('.sort-item'))
+    // console.log($('.sort-item'))
    $.ajax({
        type: "get",
        url: "./server/data1.json",
@@ -19,7 +19,7 @@ items=ele.items;
 for(let i=0;i<items.length;i++){
     htmls+=`<li>${items[i]}</li>`
 }
-console.log(htmls);
+// console.log(htmls);
 
            })
         //    for(var i=0;i<$(".sort-item-box").length;i++){

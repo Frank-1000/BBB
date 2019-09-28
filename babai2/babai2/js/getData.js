@@ -130,3 +130,101 @@ $('body').html(data.map(ul => {
 }).join(''))
 
 
+// 商品列表数据获取
+var data = [];
+var oli = document.querySelectorAll(".mod");
+for(var i=0;i<oli.length;i++){
+    var o={}
+    li=oli[i];
+  o.img=li.querySelector(".pic a img").src;
+  o.name=li.querySelector(".tit a").innerText;
+  o.title=li.querySelector(".gnzz").innerText;
+  o.title2=li.querySelector(".c_name").innerText;
+  o.pri=li.querySelector(".pdPrice").innerText;
+  o.a=li.querySelector(".goNextBtn").innerText;
+data.push(o)
+}
+JSON.stringify(data)
+  
+  
+var oLis = $(".floor-t5 .col");
+var data = [];
+oLis.each(function (index) {
+    let o = {};
+    o.title = this.querySelectorAll(".header-name")[0].innerText;
+    o.bigSrc = this.querySelectorAll(".bz-cover img")[0].src;
+    o.smSrcA = this.querySelectorAll(".bz-more img")[0].src;
+    o.smSrcB = this.querySelectorAll(".bz-more img")[1].src;
+    o.imgList = [];
+    let imgs = Array.from(this.querySelectorAll('.bz-bi-item'));
+    imgs.forEach(ele => {
+        var obj = {};
+        obj.title = ele.querySelector('.bz-bi-tit').innerText;
+        obj.name = ele.querySelector('.bz-bi-promo').innerText;
+        obj.src = ele.querySelector('.bz-bi-img').src;
+        o.imgList.push(obj);
+    })
+    data.push(o)
+})
+
+
+
+// 明星商家数据获取
+var olis = $(".brand-rec-list").children(".brand-rec-item");
+var data = [];
+olis.each(function(index) {
+    let o = {};
+    o.src = this.querySelector(".header-img").src;
+    o.title = this.querySelector(".header-name").innerText;
+    o.p=this.querySelector(".pd-bottom").innerText;
+    o.ul=[];
+    let imgs=Array.from(this.querySelectorAll('.pd-item'));
+    imgs.forEach(ele=>{
+      var obj={};
+      obj.img=ele.querySelector(".pd-img").src;
+      obj.name=ele.querySelector(".pd-name").innerText;
+      obj.pri=ele.querySelector(".pd-price em").innerText;
+      obj.del=ele.querySelector(".pd-price del").innerText;
+      o.ul.push(obj);
+    })
+    data.push(o);
+})
+console.log(data)
+
+// 楼层效果数据获取
+var odiv = $(".main-floor-box");
+var data=[];
+odiv.each(function(){
+  let o={};
+  o.h2 = this.querySelector("h2").innerText;
+  o.src = this.querySelector(".floor-main-content a img").src;
+  o.src2 = this.querySelector(".floor-side-img a img").src;
+  o.top=[];
+  let imgs=Array.from(this.querySelectorAll('.floor-rec-list a'));
+  imgs.forEach(ele=>{
+   var obj={}
+   obj.a=ele.innerText;
+   o.top.push(obj);
+  })
+  o.dl=[];
+let imgss=Array.from(this.querySelectorAll('.floor-side-rec a'));
+imgss.forEach(ele=>{
+  var bbj={};
+  bbj.a=ele.innerText;
+  o.dl.push(bbj);
+})
+ o.list=[];
+ let imgsss=Array.from(this.querySelectorAll('.floor-extra-item'));
+imgsss.forEach(ele=>{
+  ojj={};
+  ojj.img=ele.querySelector(".pd-img").src;
+  ojj.name=ele.querySelector(".pd-name").innerText;
+  ojj.title=ele.querySelector(".pd-desp").innerText;
+  ojj.pri=ele.querySelector(".pd-price em").innerText;
+  ojj.del=ele.querySelector(".pd-price del").innerText;
+  o.list.push(ojj)
+})
+
+  data.push(o)
+})
+console.log(data)
