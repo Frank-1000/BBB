@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/base_px.css">
+    <link rel="stylesheet" href="../css/goods.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../201807241420/src/jquery.exzoom.css">
+    <script src="../js/goods.js"></script>
+    <script src="../js/goodsList.js"></script>
+    <script src="../js/Cookie.js"></script>
+
+
+    <style>
+        #exzoom {
+            width: 310px;
+            /*height: 400px;*/
+            /* margin: 20px auto; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main clearfix">
+        <!--主体左侧-->
+        <div class="main_left">
+            <div class="exzoom" id="exzoom">
+                <!--大图区域-->
+                <div class="exzoom_img_box">
+                    <ul class='exzoom_img_ul'>
+                        <li><img
+                                src="http://img.800pharm.com/images//pms/upload/images/original/092017/29104/d74b7e09e0dae8cfe8f43d8e5d3023f561937f12.jpg" />
+                        </li>
+                        <li><img
+                                src="http://img.800pharm.com/images//pms/upload/images/original/062018/08170/475d16baf8d3e593eaa4e8f5bb9dcb2ada7722bb.jpg" />
+                        </li>
+                        <li><img
+                                src="http://img.800pharm.com/images//pms/upload/images/original/062018/08170/eb0a25dc5f1b4b4b3860a6c61b0392e67f6917e0.jpg" />
+                        </li>
+                        <li><img
+                                src="http://img.800pharm.com/images//pms/upload/images/original/062018/08170/393fcae67428f0b96819abcc9271c05b1d4b12f4.jpg" />
+                        </li>
+
+                    </ul>
+                </div>
+                <!--缩略图导航-->
+                <div class="exzoom_nav"></div>
+                <!--控制按钮-->
+
+            </div>
+            <!-- <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script> -->
+            <script src="../201807241420/src/jquery.exzoom.js"></script>
+            <script type="text/javascript">
+                $(".main_left").exzoom({
+                    autoPlay: false,
+                }); //方法调用，务必在加载完后执行
+            </script>
+            <!--放大镜 end-->
+            <div class="clear" style="padding: 0 10px;">
+                <img id="wechat" class="lazyload" data-original=""
+                    src="http://www.800pharm.com/shop/images/product/detail2014/synthesize.png" alt="">
+                <img style="margin-left: 4px; height: 145px; width: 140px; display: inline-block;" class="lazyload"
+                    data-original="http://www.800pharm.com/shop/images/product/detail2014/lkgamecom.png"
+                    src="http://www.800pharm.com/shop/images/product/detail2014/lkgamecom.png"
+                    alt="http://m.800pharm.com/images/wap/loading.png">
+            </div>
+            <div class="share clearfix">
+                <div class="bshare-custom clear">
+                    <a class="bshareDiv" href="http://www.bshare.cn/share"
+                        style="display: block; text-decoration: none; padding: 0px; margin: 7px; font-size: 12px; height: 21px; width: 147px;">
+                        <div class="bsPromo bsPromo1"></div>
+                        <div class="buzzButton bsStyle999"
+                            style="height:21px;color:#333;;background:transparent url(http://static.bshare.cn/images/buttons/box-shareTo-zh.gif) no-repeat;text-align:center;width:147px;">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!--主体中间商品信息-->
+
+
+        <div class="main_mid">
+            <h1 class="font18"> 鸿茅 鸿茅药酒 250ml*6瓶 +枸杞 50g +金骨康 远红外磁疗贴 4贴</h1>
+            <ul class="pro_msg">
+                <div class="zhengpinbaozheng">
+                    <a class="zhengpin_brand" href="http://www.800pharm.com/zhuanti/insurance/index.html"
+                        target="_blank"><span class="firstSpan"></span><span class="lastSpan">正品保证</span></a>
+                    <div class="zhonghuabaoxian"></div>
+                </div>
+                <li><span class="fontGrey2">八百方价：</span>
+                    <span class="price_shang font26 fontRed"><em>￥</em>568.00</span>
+                </li>
+                <li><span class="fontGrey2 info_title">市<em></em>场<em></em>价：
+                    </span> <span class="price_shi">￥860.00</span></li>
+                </li>
+                <li class="second">
+                    <span class="fontGrey2">商品名称：</span>
+                    <span class="fontGrey1 name1">
+                        <a target="_blank" href="//www.800pharm.com/shop/ppk/62716.html">
+                            鸿茅</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="fontGrey2">功效：</span>
+                    <span class="fontGrey1 name2">
+                        <a target="_blank" href="//www.800pharm.com/shop/tyk/49617.html">
+                            鸿茅药酒</a>
+                    </span>
+                </li>
+                <form action="" name="cart_form" id="cart_form" method="post">
+                    <li class="sale_num">
+                        <span class="info_title fontGrey2">数<em></em><em></em><em></em><em></em>量：</span>
+                        <div class="num_text">
+                            <input type="text" id="quantity" name="quantity" class="num_sort" onkeyup="clearNoNum(this)"
+                                value="1" size="5" maxlength="5">
+                            <div class="num">
+                                <span class="icon_add"><a href="javascript:void(0)"></a></span>
+                                <span class="icon_rec"><a href="javascript:void(0)"></a></span>
+                            </div>
+                        </div>
+                        <span class="fontNum">&nbsp;&nbsp;&nbsp;件&nbsp;&nbsp;&nbsp;&nbsp;<span>库存<span
+                                    id="STORAGE">519</span>件</span></span>
+                        <div class="btn_rx" id="j_linkAdd">
+                            <p style="display: none" class="fontBlue" id="declare"></p>
+
+                            <input type="button" name="加入需求清单" class="add_cart">
+                            <!-- <input type="button" name="提交需求" class="buy"> -->
+                            <div class="add_cart2"> 查看购物车</div>
+                        </div>
+                    </li>
+                </form>
+            </ul>
+            <div class="notice fontGrey2">
+                八百方的商品均来自正规合法药房，八百方作为第三方医药平台仅做信息展示。<br>
+                <span><b style="color: red; font-size: 14px">[温馨提示]
+                    </b>注意国庆期间（从9月24日起）北京不收圆通件（发其他快递），恢复等通知。全店满79元包邮，满688减25元，满399减15元，满299元减10元，满199减5元</span>
+            </div>
+        </div>
+
+
+        <!--主体右侧-->
+        <!--主体右侧-->
+        <div class="main_rgt">
+            <h2 class="font16 font_main_rgt">
+                <img src="http://www.800pharm.com/shop/images/jpsj.png" alt="金牌合作商家" class="shop_jpsj_hover">
+                <!-- <span class="popup_text_box">经过八百方严格评选，给您提供更好的服务体验</span> -->
+            </h2>
+            <p class="score_num clear">综合评分:<span>3.8</span></p>
+            <!--商家星星评分-->
+            <ul class="star_score clearfix">
+                <li>
+                    <span class="fontGrey3 pf_tit">商品描述：</span>
+                    <span class="icon_star"><b id="b_desc" style="width: 96%;"></b></span>
+
+                    <span class="fs fontBlue fontNum">4.8</span>
+
+                    <!-- <script type="text/javascript">
+                        jQuery(function () {
+                            starShow("b_desc", 4.8);
+                        });
+                    </script> -->
+                </li>
+                <li>
+                    <span class="fontGrey3 pf_tit">服务态度：</span>
+                    <span class="icon_star"><b id="b_service" style="width: 98%;"></b></span>
+                    <script type="text/javascript">
+                        // jQuery(function () {
+                        //     starShow("b_service", 4.9);
+                        // });
+                    </script>
+                    <span class="fs fontBlue fontNum">4.9</span>
+                </li>
+                <li>
+                    <span class="fontGrey3 pf_tit">发货速度：</span>
+                    <span class="icon_star"><b id="b_rate" style="width: 98%;"></b></span>
+                    <!-- <script type="text/javascript">
+                        jQuery(function () {
+                            starShow("b_rate", 4.9);
+                        });
+                    </script> -->
+                    <span class="fs fontBlue fontNum">4.9</span>
+                </li>
+            </ul>
+            <!--评分比较-->
+            <p class="serve_tit clear"><span>服务质量评分</span><span class="compare">与整站相比</span></p>
+            <ul class="f_compare clearfix">
+                <li id="favorable" class="clearfix">
+                    <span class="fontGrey3">好<em></em>评<em></em>率:</span>
+                    <span class="fontNum fenshu">100.0%</span>
+                    <!-- <script type="text/javascript">
+                        jQuery(function () {
+                            compareRating("favorable", 100.0, 100.0, 100.0, 100.0);
+                        });
+                    </script> -->
+                    <span class="fontRed fontNum b_pare" style="margin-top: 3px;"><span>持平</span>-----</span>
+
+                </li>
+                <li id="fast" class="clearfix">
+                    <span class="fontGrey3 fh_48">24H发货:</span>
+                    <span class="fontNum fenshu">89.3%</span>
+                    <!-- <script type="text/javascript">
+                        jQuery(function () {
+                            compareRating("fast", 89.3, 89.3, 89.3, 89.3);
+                        }); -->
+                    </script>
+                    <span class="fontRed fontNum b_pare" style="margin-top: 3px;"><span>持平</span>-----</span>
+                </li>
+            </ul>
+            <ul class="kf_zl">
+                <li class="frt">
+                    <span class="shop_t">店铺客服：</span>
+                    <a href="javascript:;" onclick="NTKF.im_openInPageChat('bf_1000_1450344131702')">
+                        <img border="0" width="80" height="20"
+                            src="http://www.800pharm.com/shop/images/common/kefu_icon.png">
+                    </a>
+                </li>
+                <li>
+
+                    <br>
+                </li>
+                <li>
+                    <span class="fontGrey3">所在地区：</span>
+                    <span>广东省广州市</span>
+                </li>
+                <li>
+                    <span class="fontGrey3">联<em></em>系<em></em>人：</span>
+                    <span>邱洪金</span>
+                </li>
+                <li class="clearfix">
+                    <span class="fontGrey3 zs">资格证书：</span>
+                    <a href="http://www.800pharm.com/shop/index-info-100430.html" target="_blank" title="康爱多资质证书"><span
+                            class="zs_pic"></span></a>
+                </li>
+                <li style="height:auto;">
+                    <p class="fontGrey3">互联网药品信息服务资格证书：</p>
+                    <p class="fontNum"><a href="http://www.800pharm.com/shop/index-info-100430.html"
+                            target="_blank">(粤)-非经营性-2015-0184</a> </p>
+                </li>
+            </ul>
+            <div class="b_btn"><a href="http://www.800pharm.com/shop/index-100430.html" target="_blank"><span
+                        class="come_in">进入药店</span><span class="cir"></span></a><a
+                    href="http://www.800pharm.com/shop/product/merchantRating-100430.html" target="_blank"><span
+                        class="ping_fen">详细评分</span><span class="cir"></span></a></div>
+        </div>
+        <!--主体右侧结束-->
+        <!--主体右侧结束-->
+        <img class="lazyload" data-original="/shop/images/product/detail2014/tips_chufang.jpg"
+            src="http://www.800pharm.com/shop/images/product/detail2014/tips_chufang.jpg" alt="八百方处方药流程图"
+            style="display: inline;">
+    </div>
+
+    <!-- 弹出登陆框 -->
+    <div class="pop" id="login-pop" style="display: none;">
+        <div class="login_box">
+            <div class="hd">
+                <p class="tit">登录八百方</p>
+                <p class="close"></p>
+            </div>
+            <div class="bd">
+                <div class="b_main">
+                    <div class="hint" style="display: none">
+                        <div class="hint-icon">一</div>
+                        <p>请输入有效的账号名</p>
+                    </div>
+                    <div class="user-tel">
+                        <img src="/shop/images/member/regLog/user.png" alt="">
+                        <input style="cursor: text;" type="text" class="phone" name="accout"
+                            placeholder="请输入手机号/邮箱地址/账号名">
+                    </div>
+                    <div class="user-pwd">
+                        <img src="/shop/images/member/regLog/lock.png" alt="">
+                        <input maxlength="16" style="cursor: text;" type="password" class="password-hide" name="pwd"
+                            placeholder="请输入您的密码">
+                    </div>
+                    <div class="auto_log">
+                        <input name="status" class="status" type="checkbox" value="">两周内免登录
+                        <a class="for_register" target="_blank" href="/shop/member/forget_pwd.html">忘记密码？</a>
+                    </div>
+                    <div class="login-btn-submit" onclick="loginCheck()">登&nbsp;&nbsp;录</div>
+                </div>
+            </div>
+            <ul class="login-other">
+                <li>
+                    <a href="/shop/member/redirect2OpenQQ.html">
+                        <img src="http://www.800pharm.com/shop/images/member/regLog/QQ.png" alt="">
+                        QQ
+                    </a>
+                    <div class="gaps"></div>
+                </li>
+                <li>
+                    <a href="/shop/member/wx_pc.html?backurl=http://www.800pharm.com/shop/product-100430-1579005.html">
+                        <img src="http://www.800pharm.com/shop/images/member/regLog/wechat.png" alt="">
+                        微信
+                    </a>
+                    <div class="gaps"></div>
+                </li>
+                <li>
+                    <a href="/shop/member/alipayLogin.html">
+                        <img src="http://www.800pharm.com/shop/images/member/regLog/alipay.png" alt="">
+                        支付宝
+                    </a>
+                    <div class="gaps"></div>
+                </li>
+                <li>
+                    <a href="/shop/member/sinaLogin.html">
+                        <img src="http://www.800pharm.com/shop/images/member/regLog/sina.png" alt="">
+                        微博
+                    </a>
+                </li>
+                <li class="sign-btn">
+                    <a href="http://127.0.0.1/BBB/babai2/html/register.html">
+                        <img src="http://www.800pharm.com/shop/images/member/regLog/right-circle.png" alt="">
+                        免费注册
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

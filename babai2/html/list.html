@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表页</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+
+    <link rel="stylesheet" href="../css/list.css">
+
+</head>
+
+<body>
+    <div id="page" class="w1190 b_search list_mod">
+        <div id="content">
+            <div class="pos">
+                <span>您当前的位置：</span><a href="http://127.0.0.1/BBB/babai2/home.html">首页</a> &gt; <a
+                    href="http://127.0.0.1/BBB/babai2/home.html">健康商城</a>
+            </div>
+            <!--left start-->
+            <div class="ly_lt">
+                <!--列表选项 start-->
+                <div class="b_pade b_pade_noBorder">
+                    <div class="showClass">
+                        <a class="listShow" title="列表模式"
+                            href="/shop/search.html?keyword=&amp;obcid=1&amp;twbcid=9&amp;style=list"></a>
+                        <a class="gridShow" title="网格模式"
+                            href="/shop/search.html?keyword=&amp;obcid=1&amp;twbcid=9&amp;style=grid"></a>
+
+                    </div>
+                    <div class="choose_order">
+                        <a id="searchDefault" href="javascript:void(0)" class="listShow1 red">默认</a>
+                        <a id="salesNumOrderBy" class="listShow1" href="javascript:void(0)">价格从高到低</a>
+                        <a id="salesNumOrderBy2" class="listShow1" href="javascript:void(0)">价格从低到高</a>
+                    </div>
+
+                </div>
+                <!--列表选项 end-->
+                <!--产品列表 start-->
+                <div id="search_result" class="b_result">
+
+                    <!-- 双十一打标商品 start-->
+                    <script src="../js/list.js"></script>
+                    <!-- <script src="../js/goodsList.js"></script> -->
+                    <!-- 产品信息 end -->
+                </div>
+                <!-- 产品列表 end -->
+                <!-- 产品列表 end -->
+                <!--分页 start-->
+                <div id="pageDiv">
+                    <div class="pages">
+
+                    </div>
+                </div>
+
+            </div>
+</body>
+
+</html>
